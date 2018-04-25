@@ -1,5 +1,3 @@
-// @ts-check
-
 const player = require('play-sound')()
 const { join } = require('path')
 
@@ -60,10 +58,10 @@ function applyHook (compiler, hook, callback) {
 class Sounds {
   /**
    * Constructor to create a Sounds Plugin instance
-   * @param {object} [options={}] - Sounds Plugin Options
-   * @param {Notifications?} options.notifications - Notifications map
-   * @param {SoundsLibrary?} options.sounds - Sound Library map
-   * @param {object?} options.playerOptions - Options passed to the play function
+   * @param {SoundsConstructorOptions} [options] - Sounds Plugin Options
+   * @param {Notifications} [options.notifications] - Notifications map
+   * @param {SoundsLibrary} [options.sounds] - Sound Library map
+   * @param {object} [options.playerOptions] - Options passed to the play function
    */
   constructor (
     // for better typing
@@ -120,4 +118,5 @@ module.exports = Sounds
  * @typedef {{[key: string]: string}} SoundsLibrary
  * @typedef {{[key: string]: string | ((this: Sounds, stats: any) => void)}} Notifications
  * @typedef {(stats: any) => void} StatsCallback
+ * @typedef {{notifications?: Notifications, sounds?: SoundsLibrary, playerOptions?: any}} SoundsConstructorOptions
  */
