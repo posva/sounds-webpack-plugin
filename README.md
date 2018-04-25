@@ -57,7 +57,7 @@ module.exports = {
 }
 ```
 
-You can provide 3 special values that are not webpack hooks: `$hasErrors`, `$hasWarnings`, `$success` and `$successAfterError`. You can check default values [here](). You can of course override any of them in `sounds` option.
+You can provide 3 special values that are not webpack hooks: `$hasErrors`, `$hasWarnings`, `$success` and `$successAfterError`. You can check default values [here](https://github.com/posva/sounds-webpack-plugin/blob/master/src/index.js#L8). You can of course override any of them in `sounds` option.
 
 SoundsPlugin comes with 4 sounds:
 
@@ -66,7 +66,7 @@ SoundsPlugin comes with 4 sounds:
 * `xpError`:
 * `levelUp`: - used when the build succeeds after an error
 
-SoundsPlugin uses [play-sound]() under the hood. You can pass down options to the player with `playerOptions`:
+SoundsPlugin uses [play-sound](https://github.com/shime/play-sound) under the hood. You can pass down options to the player with `playerOptions`:
 
 ```js
 // webpack.config.js
