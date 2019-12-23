@@ -65,7 +65,7 @@ class Sounds {
    */
   constructor (
     // for better typing
-    options = {}
+    options = {},
   ) {
     Object.assign(notifs, options.notifications)
     Object.assign(soundsLib, options.sounds)
@@ -102,7 +102,7 @@ class Sounds {
   play (sound, options) {
     if (!soundsLib[sound]) {
       console.log(
-        `There is no "${sound}" registered sound, make sure to register it when instantiating SoundsPlugin`
+        `There is no "${sound}" registered sound, make sure to register it when instantiating SoundsPlugin`,
       )
       return
     }
